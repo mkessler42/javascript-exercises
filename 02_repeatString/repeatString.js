@@ -1,9 +1,14 @@
 const repeatString = function getRepeatedString(string, num) {
     var newString = ''
-    for (let i = 0; i < num; i++) {
-        newString.concat(string);
+    if (num < 0) {
+        return 'ERROR';
     }
-    return newString;
+    else {
+        for (let i = 0; i < num; i++) {
+            newString += string;
+        }
+        return newString;
+    }
 };
 
 // Do not edit below this line
